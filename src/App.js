@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+// 项目根组件
+import { useState } from 'react'
 
+const Button = () => {
+  return <div>Button</div>
+}
 function App() {
+  const [count, setCount] = useState(0)
+
+  const handClick = () => {
+    console.log('click', count)
+
+    setCount(count + 1)
+  }
+
+  const [from, setFrom] = useState({ name: 'Jack' })
+
+  const changeFrom = () => {
+    setFrom({ ...from, name: 'Murphy' })
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Button></Button>
+      <button onClick={handClick}>{count}</button>
+      <button onClick={changeFrom}>修改From {from.name}</button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
