@@ -7,7 +7,7 @@ const Foods = ({ id, picture, name, unit, description, food_tag_list, month_sale
   return (
     <dd className='cate-goods'>
       <div className='goods-img-wrap'>
-        <img src={picture} alt='' className='goods-img' />
+        <div className='goods-img'>商品图</div>
       </div>
       <div className='goods-info'>
         <div className='goods-desc'>
