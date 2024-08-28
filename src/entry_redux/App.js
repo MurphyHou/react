@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { increment, decrement, addToNum } from '../store/modules/counterStore'
-import { fetchChannelList } from '../store/modules/channelStore'
+import { increment, decrement, addToNum } from './store/modules/counterStore'
+import { fetchChannelList } from './store/modules/channelStore'
 function App() {
   const { count } = useSelector((state) => state.counter)
   const { channelList } = useSelector((state) => state.channel)
